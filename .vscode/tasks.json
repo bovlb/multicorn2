@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Multicorn2",
+      "type": "shell",
+      "command": "make && make install",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean + Rebuild Multicorn2",
+      "type": "shell",
+      "command": "make clean && make && make install",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Tests",
+      "type": "shell",
+      "command": "pytest tests/",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Multicorn2 Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [5432],
+  "mounts": [
+    "source=multicorn2-dev-data,target=/var/lib/postgresql/data,type=volume"
+  ],
+  "postCreateCommand": "sudo make install",
+  "remoteUser": "vscode",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
